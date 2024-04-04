@@ -1,28 +1,28 @@
 // 10. Objetos e Arrays: Crie uma função que recebe um array de objetos. Cada objeto tem propriedades para nome e idade. A função deve retornar o nome da pessoa mais velha no array.
 
-function getOldestPersonName(people) {
-    if (!Array.isArray(people) || people.length === 0) {
-      throw new Error('Input must be a non-empty array');
+function AcesseOmaisVelho(pessoa) {
+    if (!Array.isArray(pessoa) || pessoa.length === 0) {
+      throw new Error("A entrada deve ser uma matriz não vazi");
     }
   
-    let oldestAge = people[0].idade;
-    let oldestName = people[0].nome;
+    let idadeMaisAntiga = pessoa[0].idade;
+    let nomeMaisvelho = pessoa[0].nome;
   
-    for (const person of people) {
-      if (person.idade > oldestAge) {
-        oldestAge = person.idade;
-        oldestName = person.nome;
+    for (const personagen of pessoa) {
+      if (personagen.idade > idadeMaisAntiga) {
+        idadeMaisAntiga = personagen.idade;
+        nomeMaisvelho = personagen.nome;
       }
     }
   
-    return oldestName;
+    return nomeMaisvelho;
   }
   
-  // Example usage:
-  const people = [
-    { nome: 'Alice', idade: 30 },
-    { nome: 'Bob', idade: 35 },
-    { nome: 'Charlie', idade: 32 },
+  
+  const pessoa = [
+    { nome: 'cariane', idade: 30 },
+    { nome: 'balestrin', idade: 35 },
+    { nome: 'dino', idade: 32 },
   ];
   
-  document.write(getOldestPersonName(people)); 
+  document.write(AcesseOmaisVelho(pessoa)); 
